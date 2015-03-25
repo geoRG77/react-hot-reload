@@ -1,0 +1,12 @@
+development: &default
+  adapter: postgresql
+  database: instalments_development
+  encoding: utf8
+  min_messages: warning
+  pool: 5
+  timeout: 5000
+
+test:
+  <<: *default
+  database: instalments_test
+
