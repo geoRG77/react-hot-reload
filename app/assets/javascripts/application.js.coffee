@@ -8,4 +8,4 @@
 #= require jquery_ujs
 #
 # Pull compiled from /public/assets/javascripts
-#= require global
+#= require app

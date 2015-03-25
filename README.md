@@ -1,9 +1,33 @@
-# Instalments – Blueberry Rails project
+# React hot reload example app
 
-Use the following guides for getting things done, programming well, and
-programming in style.
+Sample Rails app using Gulp instead of asset pipeline
 
-* [Protocol](http://github.com/thoughtbot/guides/blob/master/protocol)
-* [Best Practices](http://github.com/thoughtbot/guides/blob/master/best-practices)
-* [Style](http://github.com/thoughtbot/guides/blob/master/style)
-* [Git commit message](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
+## Features
+
+  * SLIM for HTML (Rails gem)
+  * SASS (with Autoprefixer, source maps)
+  * React + ES6 (using Babel & Browserify with incremental builds)
+  * Generate font icons
+  * Optimize images
+
+## Not working
+
+  * React hot reload (using livereactload)
+
+## Usage
+
+    # Clone repository
+    git clone git@github.com:geoRG77/react-hot-reload.git
+    cd react-hot-reload
+
+    # Install gems
+    bundle install
+
+    # Install node modules
+    npm install
+
+    # Run rails server
+    rails s
+
+    # Run default task in Gulp (w/ BrowserSync)
+    gulp

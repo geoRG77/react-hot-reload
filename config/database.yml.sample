@@ -1,6 +1,6 @@
 development: &default
   adapter: postgresql
-  database: instalments_development
+  database: react_hot_loader
   encoding: utf8
   min_messages: warning
   pool: 5
@@ -8,5 +8,5 @@ development: &default
 
 test:
   <<: *default
-  database: instalments_test
+  database: react_hot_loader_test
 

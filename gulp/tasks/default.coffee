@@ -1,3 +1,3 @@
 gulp = require 'gulp'
 
-gulp.task 'default', [ 'sass', 'watch' ]
+gulp.task 'default', [ 'scripts', 'sass', 'watch' ]

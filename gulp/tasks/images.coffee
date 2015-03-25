@@ -1,7 +1,8 @@
+config      = require('../config').images
+
 changed     = require 'gulp-changed'
 gulp        = require 'gulp'
 imagemin    = require 'gulp-imagemin'
-config      = require('../config').images
 browserSync = require 'browser-sync'
 
 gulp.task 'images', ->

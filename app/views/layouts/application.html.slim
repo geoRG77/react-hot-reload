@@ -2,13 +2,15 @@ doctype html
 html
   head
     title= page_title
-    meta charset="utf-8"
+    meta charset='utf-8'
+    meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no'
+    meta name='format-detection' content='telephone=no'
     = stylesheet_link_tag :application, media: 'all'
     = csrf_meta_tags
 
   body class=body_class
     = render 'application/flashes'
-    = yield
+    .container = yield
 
     = javascript_include_tag :application
     = yield :javascript

@@ -8,6 +8,18 @@ module.exports =
     proxy: 'localhost:3000'
     files: [ './app/views/**' ]
 
+  scripts:
+    src: sourceFiles + '/javascripts/app.jsx'
+    dest: publicAssets + '/javascripts'
+    browserifyOptions:
+      entries: sourceFiles + '/javascripts/app.jsx'
+      extensions: [ '.jsx', '.js' ]
+      insertGlobals: true
+      fullPaths: false
+      packageCache: {}
+      cache: {}
+      debug: process.env.RAILS_ENV != 'production'
+
   sass:
     src: sourceFiles + '/stylesheets/**/*.sass'
     dest: publicAssets + '/stylesheets'
@@ -33,15 +45,3 @@ module.exports =
       fontName: 'font-icons'
       appendCodepoints: true
       normalize: false
-
-  browserify: bundleConfigs: [ {
-    entries: [
-      # import React
-      #'./node_modules/react/dist/react.js'
-      sourceFiles + '/javascripts/global.coffee'
-    ]
-    dest: publicAssets + '/javascripts'
-    outputName: 'global.js'
-    extensions: [ '.js', '.coffee' ]
-    debug: !process.env.RAILS_ENV == 'production'
-  } ]
